@@ -18,7 +18,6 @@ def menu(request) -> str:
             while item_id != None:
                 for item in queryset:
                     if str(item_id) == str(item['id']):
-                        print(item_id)
                         tree_set.append(item)
                         item_id = item['parent_id']
             tree_set.reverse()
