@@ -30,7 +30,6 @@ def menu(request) -> str:
             if str(item['id']) == item_id:
                 html += f"<div class='parent'><strong><a href='/menu/?id={item['id']}&name={item['name']}'>{item['name']}</a></strong>"
                 for child in queryset:
-                    print(child)
                     if child['parent_id'] == item['id']:
                         html += f"<div class='child'><a href='/menu/?id={child['id']}&name={child['name']}'>{child['name']}</a></div>"
                 html += "</div>"
