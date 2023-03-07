@@ -4,7 +4,6 @@ from .models import *
 
 
 def index(request):
-    print(request.GET)
     return render(request, 'menu/index.html')
 
 
